@@ -3,8 +3,19 @@
 int main() {
     int pos, i, val, choice, size, flag = 0, len= 0;
 
-    printf("Max Size of SAL is set to 10 !!!");
-    int arr[10] = {0};
+    printf("Enter the maximum size of the array (up to 10): ");
+    scanf("%d", &size);
+
+    if (size > 10 || size <= 0) {
+        printf("Invalid size. Size must be between 1 and 10.\n");
+        return 1;
+    }
+
+    int arr[size];
+
+    for (i = 0; i < size; i++) {
+        arr[i] = 0;
+    }
 
     while (1) {
        err:
@@ -30,7 +41,7 @@ int main() {
             printf("Enter the value you want to search: \n");
             scanf("%d", &val);
 
-            for (i = 0; i < 10; i++) {
+            for (i = 0; i < size; i++) {
                 if (arr[i] == val) {
                     flag++;
                     printf("%d found at index %d\n", val, i);
@@ -64,13 +75,13 @@ int main() {
                 len++;
 
             printf("\nCurrent arraylist: \n");
-            for (i = 0; i < 10; i++) {
+            for (i = 0; i < size; i++) {
                 printf("%d ", arr[i]);
             }
 
         }else if (choice == 5) {
             printf("Current array: \n");
-            for (i = 0; i < 10; i++) {
+            for (i = 0; i < size; i++) {
                 printf("%d ", arr[i]);
             }
             printf("\n");
@@ -88,7 +99,7 @@ int main() {
                 }
             }
             printf("Updated array: \n");
-            for (i = 0; i < 10; i++) {
+            for (i = 0; i < size; i++) {
                 printf(" %d", arr[i]);
             }
             printf("\n");
