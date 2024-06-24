@@ -184,9 +184,6 @@ int main() {
             else
                 printf("The search variable %d is at index %d\n", val, pos);
 
-
-
-
         }else if (choice == 0) {
             printf("Thank you\n");
             break;
