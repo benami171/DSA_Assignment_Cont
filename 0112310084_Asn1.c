@@ -253,7 +253,7 @@ int main() {
         }
 
         else if (choice == 13){
-            int shft, temp1, temp2;
+            int shft, temp1;
 
             printf("\nHow many places you want to shift by: ");
             scanf("%d", &shft);
