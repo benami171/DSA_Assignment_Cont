@@ -40,8 +40,6 @@ void insertTail(int num)
     if(head==NULL)
     {
         head=newItem;
-        newItem->prev = NULL;
-        newItem->next = NULL;
         tail=head;
     }
 
