@@ -126,15 +126,15 @@ void deletefromPosition(int pos){
 void deleteVal(int x){
    if (head==NULL)       //list empty
 	   return;
-   struct node *cur = head;
+   struct node *temp = head;
    struct node *prev = NULL;
-   while (cur->value != x){
-	   prev = cur;
-	   cur=cur->next;
+   while (temp->value != x){
+	   prev = temp;
+	   temp = temp->next;
    }
  if (prev != NULL)
-  	   prev->next = cur->next;
- free(cur);
+  	   prev->next = temp->next;
+ free(temp);
 }
 
 
