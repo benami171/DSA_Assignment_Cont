@@ -42,6 +42,11 @@ void insertFirst(int num)
 {
     struct node *newItem;
     newItem = (struct node *) malloc(sizeof(struct node));
+    if(newItem == NULL)
+    {
+        printf("Memory allocation failed\n");
+        return;
+    }
     newItem->value = num;
     newItem->prev = NULL;
 
@@ -64,6 +69,11 @@ void insertTail(int num)
 {
     struct node *newItem;
     newItem = (struct node *) malloc(sizeof(struct node));
+    if (newItem == NULL)
+    {
+        printf("Memory allocation failed\n");
+        return;
+    }
     newItem->value = num;
     newItem->next = NULL;
     if(head==NULL)
@@ -92,6 +102,11 @@ void insert_after_value(int num, int x)
 {
     struct node *newItem, *temp, *temp1;
     newItem = (struct node *) malloc(sizeof(struct node));
+    if(newItem == NULL)
+    {
+        printf("Memory allocation failed\n");
+        return;
+    }
     newItem->value = num;
     if(head==NULL)
     {
@@ -123,6 +138,11 @@ void insert_position(int num, int pos)
 {
     struct node *newItem, *temp;
     newItem = (struct node *) malloc(sizeof(struct node));
+    if (newItem == NULL)
+    {
+        printf("Memory allocation failed\n");
+        return;
+    }
     newItem->value = num;
 
     if(pos == 1)
